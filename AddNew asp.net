@@ -1,0 +1,75 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddNew.aspx.cs" Inherits="AddNew" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Create</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!-- Container for the whole website-->
+    <asp:Panel id="wrapper" runat="server">
+        <!-- Contains the site logo, link to home, and login/logout-->
+        <div id="controlpanel">
+            <a href="Default.aspx"><asp:Image ID="imgSiteLogo" runat="server" ImageUrl="images/logo.png" /></a>
+            <asp:Panel ID="links" runat="server">
+                <asp:Label ID="lblCreate" runat="server"><a href="Create.aspx">Create </a></asp:Label>
+                <asp:Label ID="lblUpdate" runat="server"><a href="Update.aspx">Update </a></asp:Label>
+            </asp:Panel>
+            <div id="user">
+                <asp:Label ID="lblUser" runat="server">Welcome, <a href="User.aspx">whichdockter</a> | Logout</asp:Label>
+            </div>
+        </div>
+        <asp:Panel id="main" runat="server">
+            <asp:Label ID="lblID" runat="server">Comic ID Number: </asp:Label><asp:TextBox ID="tbID" runat="server" ></asp:TextBox>
+            <br />
+            <asp:Label ID="lblName" runat="server">Comic Title: </asp:Label><asp:TextBox ID="tbName" runat="server"></asp:TextBox>
+            <asp:Label ID="lblDesc" runat="server">Description: </asp:Label><asp:TextBox ID="tbDesc" runat="server" TextMode="MultiLine"></asp:TextBox>
+            <br />
+            <asp:Label ID="test" runat="server"></asp:Label>
+            <asp:Label ID="lblRate" runat="server">Rating: </asp:Label>
+            <asp:DropDownList ID="ddlRate" runat="server">
+                <asp:ListItem>General Audiences</asp:ListItem>
+                <asp:ListItem>Teen</asp:ListItem>
+                <asp:ListItem>Mature</asp:ListItem>
+                <asp:ListItem>Explicit</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:Label ID="lblGenre" runat="server">Genre: </asp:Label>
+            <asp:DropDownList ID="ddlGenre" runat="server">
+                <asp:ListItem>Action</asp:ListItem>
+                <asp:ListItem>Fantasy</asp:ListItem>
+                <asp:ListItem>SciFi</asp:ListItem>
+                <asp:ListItem>Comedy</asp:ListItem>
+                <asp:ListItem>Drama</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:Label ID="lblSubGenre" runat="server">Subgenre: </asp:Label>
+            <asp:DropDownList ID="ddlSubGenre" runat="server">
+                <asp:ListItem>Action</asp:ListItem>
+                <asp:ListItem>Fantasy</asp:ListItem>
+                <asp:ListItem>Science-Fiction</asp:ListItem>
+                <asp:ListItem>Comedy</asp:ListItem>
+                <asp:ListItem>Drama</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:Label ID="lblAuthor" runat="server">Author: </asp:Label><asp:TextBox ID="tbAuthor" runat="server"></asp:TextBox>
+            <asp:Label ID="lblUpdateSchedule" runat="server">Update Schedule: </asp:Label><asp:TextBox ID="tbUpdate" runat="server"></asp:TextBox>
+            <br />
+            <asp:Label ID="lblURL" runat="server">Comic URL: </asp:Label><asp:TextBox ID="tbURL" runat="server"></asp:TextBox>
+            <br />
+            <asp:Label ID="lblComicImage" runat="server">Select a comic title image.</asp:Label>
+            <br />
+            <asp:FileUpload runat="server" ID="fuComicImage" />
+            <br />
+            <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Go!" />
+        </asp:Panel>
+    </asp:Panel>
+    
+    </form>
+</body>
+</html>
