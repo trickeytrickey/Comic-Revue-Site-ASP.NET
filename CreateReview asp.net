@@ -1,0 +1,31 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CreateReview.aspx.cs" Inherits="CreateReview" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:Label ID="lblComicName" runat="server" Text="Label">Comic Name</asp:Label>
+            <asp:TextBox ID="txtComicName" runat="server"></asp:TextBox><br />
+        <asp:Label ID="lblReviewer" runat="server" Text="Label">Your Name</asp:Label>
+            <asp:TextBox ID="txtReviewer" runat="server"></asp:TextBox><br />
+        <asp:Label ID="lblRating" runat="server" Text="Label">Rating</asp:Label>
+            <asp:TextBox ID="txtRating" runat="server"></asp:TextBox><br />
+        <asp:Label ID="lblGenre1" runat="server" Text="Label">Main Genre</asp:Label>
+            <asp:TextBox ID="txtGenre1" runat="server"></asp:TextBox><br />
+        <asp:Label ID="lblGenre2" runat="server" Text="Label">Secondary Genre</asp:Label>
+            <asp:TextBox ID="txtGenre2" runat="server"></asp:TextBox><br />
+        <asp:Label ID="lblQuality" runat="server" Text="Label">Quality</asp:Label>
+            <asp:TextBox ID="txtQuality" runat="server"></asp:TextBox><br />
+        <asp:Label ID="lblURL" runat="server" Text="Label">Comic web adress</asp:Label>
+            <asp:TextBox ID="txtURL" runat="server"></asp:TextBox><br />
+        <asp:Button ID="Button1" runat="server" Text="Add Review" 
+            onclick="Button1_Click" />
+    </div>
+    </form>
+</body>
+</html>
