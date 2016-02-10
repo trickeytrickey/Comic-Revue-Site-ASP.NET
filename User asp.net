@@ -1,0 +1,73 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="User.aspx.cs" Inherits="User" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>User Profile</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!-- Container for the whole website-->
+    <div id="wrapper">
+        <!-- Contains the site logo, link to home, and login/logout-->
+        <div id="controlpanel">
+            <a href="Default.aspx"><asp:Image ID="imgSiteLogo" runat="server" ImageUrl="images/logo.png" /></a>
+            <asp:Panel ID="links" runat="server">
+                <asp:Label ID="lblCreate" runat="server"><a href="Create.aspx">Create </a></asp:Label>
+                <asp:Label ID="lblUpdate" runat="server"><a href="Update.aspx">Update </a></asp:Label>
+            </asp:Panel>
+            <div id="user">
+                <asp:Label ID="lblUser" runat="server">Welcome, <a href="User.aspx">whichdockter</a> | Logout</asp:Label>
+            </div>
+        </div>
+        <!-- Main section. Includes all information about the specified user.-->
+        <div id="main">
+           <!-- Autopopulates with user profile picture-->
+           <div id="prof">
+                <asp:Image ID="imgUserProfile" ImageUrl="images/whichdockter.jpg" runat="server" />
+           </div>
+           <div id="biography">
+                <!-- Autopopulates with specified username and join date-->
+                <div id="username">
+                    <h1>whichdockter</h1>
+                    <h2>member since 4/27/2014</h2>
+                </div>
+                <div id="profiletext">
+                    <h3>Biography</h3>
+                    <p>Hello, my name is Rachel, or Doc, if you prefer. I've been reading web comics on and off for about eight years, but have loved manga, comic books, and newspaper strips for even longer. I'm an aspiring artist and one day would like to publish my own web comic.</p>
+                    <h3>Recent Activity</h3>
+                    <asp:Label ID="lblRecent1" runat="server">- whichdockter wrote a review for <a href="Review.aspx">Paranatural</a></asp:Label>
+                    <br />
+                    <asp:Label ID="lblRecent2" runat="server">- whichdockter wrote a review for <a href="Review.aspx">Monsterkind</a></asp:Label>
+                    <br />
+                    <asp:Label ID="lblRecent3" runat="server">- whichdockter commented on <a href="Review.aspx">MS Paint Adventures</a></asp:Label>
+                </div>
+           </div>
+           <div id="currentlyreading">
+                <div id="reading1" class="reading"></div>
+                <div id="reading2" class="reading"></div>
+                <div id="reading3" class="reading"></div>
+           </div>
+        </div><!-- Close main-->
+        <!-- Body section. Contains all feed activity from the specified user-->
+        <div id="body">
+            <h1>ACCOUNT HISTORY</h1>
+        </div>
+    </div><!-- Close wrapper-->
+    </form>
+
+    <!--Start the footer with links -->
+    <div id="foot">
+        <center>
+            <a href="http://www.facebook.com"><img class="social" src="images/fb.jpg" style="margin:0 auto; height: 46px; width: 49px;"/></a>
+            <a href="http://www.pintrest.com"><img class="social" src="images/pintrest.jpg" style="margin:0 auto; height: 53px; width: 50px;" /></a>
+            <a href="http://www.twitter.com"><img class="social" src="images/twit.jpg" style="margin:0 auto; height: 45px; width: 48px;" /></a>
+        </center>
+    </div>
+    <!--End the footer with links -->
+</body>
+</html>
