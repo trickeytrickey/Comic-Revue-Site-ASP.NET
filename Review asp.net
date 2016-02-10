@@ -1,0 +1,114 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Review.aspx.cs" Inherits="Review" %>
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Review</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <script type="text/javascript" async="async" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
+    <form id="form1" runat="server">
+    <!-- Container for the whole website-->
+    <asp:Panel id="wrapper" runat="server">
+
+        <!-- Main section. Includes all logos, ratings, links, and the review itself.-->
+        <asp:Panel id="main" runat="server">
+            
+
+           <!-- Information section, with the comic's logo and stats-->
+           <asp:Panel runat="server" id="information">
+                <!-- Autopopulates with this comic's logo, including a hyperlink to the comic's site-->
+                <asp:Panel runat="server" id="reviewlogo">
+                    <a href="http://paranatural.net"><asp:Image ID="imgReviewLogo" runat="server" ImageUrl="images/hdrParanatural.png" /></a>
+                </asp:Panel>
+                <!-- Autopopulates with this particular web comics stats, ratings, and other information-->
+                <asp:Panel runat="server" id="stats">
+                    <asp:Panel runat="server" id="statblock">
+                        <asp:Table ID="tblStat" runat="server">
+                            <asp:TableRow ID="rowStat1" runat="server">
+                                <asp:TableCell ID="cellRating" runat="server"><asp:Image ID="imgRatingBlock" runat="server" ImageUrl="images/ratingGen.png" AlternateText="General Audiences" /></asp:TableCell>
+                                <asp:TableCell ID="cellGenre" runat="server"><asp:Image ID="imgGenreBlock" runat="server" ImageUrl="images/genreComedy.png" AlternateText="Comedy" /></asp:TableCell>
+                            </asp:TableRow>
+                            <asp:TableRow ID="rowStat2" runat="server">
+                                <asp:TableCell ID="cellSubGenre" runat="server"><asp:Image ID="imgSubGenreBlock" runat="server" ImageUrl="images/genreFantasy.png" AlternateText="Fantasy" /></asp:TableCell>
+                                <asp:TableCell ID="cellStatus" runat="server"><asp:Image ID="imgStatusBlock" runat="server" ImageUrl="images/statusOngoing.png" AlternateText="Ongoing" /></asp:TableCell>
+                            </asp:TableRow>
+                        </asp:Table>
+                    </asp:Panel>
+                    <asp:Panel runat="server" id="statwriteup">
+                        <asp:Table ID="tblWriteUp" runat="server">
+                            <asp:TableRow ID="rowCreator" runat="server">
+                                <asp:TableCell ID="cellCreator1">Creator(s): </asp:TableCell>
+                                <asp:TableCell ID="cellCreator2">Zack Morrison</asp:TableCell>
+                            </asp:TableRow>
+                            <asp:TableRow ID="rowUpdateSchedule" runat="server">
+                                <asp:TableCell ID="cellUpdateSchedule1" runat="server">Update Schedule: </asp:TableCell>
+                                <asp:TableCell ID="cellUpdateSchedule2" runat="server">Mondays and Fridays</asp:TableCell>
+                            </asp:TableRow>
+                            <asp:TableRow ID="rowDescription" runat="server">
+                                <asp:TableCell ID="cellDescription1" runat="server">Description: </asp:TableCell>
+                                <asp:TableCell ID="cellDescription2" runat="server">Superpowers and ghosts and stuff.</asp:TableCell>
+                            </asp:TableRow>
+                        </asp:Table>
+                    </asp:Panel>
+                </asp:Panel>
+           </asp:Panel>
+            
+           <!-- Review section, containing the body of the review-->
+           <asp:Panel runat="server" id="review">
+                <asp:Panel runat="server" id="reviewbody">
+                    <asp:Label ID="lblReviewedBy" runat="server">reviewed by <a href="User.aspx">whichdockter</a></asp:Label>
+                    <p>This is a sample blurb and review for a webcomic. Ideally in the future, it will be autopopulated along with the rest of the elements on this page.</p>
+                    <p>There really should be some kind of page where you can actually write and create these reviews but welp, I'm not really sure what that should look like. Something to think about in the future.</p>
+                    <p>Also not really sure what the stats section above should contain, but ah well!</p>
+                    <div id="levels">
+                    
+                    </div>
+                </asp:Panel>
+               <asp:Panel runat="server" id="secondOpinion">
+                   <asp:Panel runat="server" id="readOpinion"></asp:Panel>
+                   <asp:Panel runat="server" id="writeOpinion"></asp:Panel>
+               </asp:Panel>
+           </asp:Panel>
+
+
+        </asp:Panel><!-- Close main-->
+        
+      
+        <!-- Body section. Includes comments from users-->
+        <asp:Panel runat="server" id="body">
+        
+            
+        </asp:Panel>
+    </asp:Panel><!-- Close wrapper-->
+        <div id="pintrest" style="position:absolute; top:50px; right:0;">
+              <a data-pin-do="embedBoard" href="http://www.pinterest.com/komicrevue/komic-revue-top-picks/" data-pin-scale-width="60" data-pin-scale-height="783" data-pin-board-width="184">
+                  Komic Revue is on Pintrest</a>
+            </div>
+         
+    </form>
+
+   <div id="foot">
+        <center>
+            <a href="http://www.facebook.com"><img class="social" src="images/fb.jpg" style="margin:0 auto; height: 46px; width: 49px;"/></a>
+            <a href="http://www.pintrest.com"><img class="social" src="images/pintrest.jpg" style="margin:0 auto; height: 53px; width: 50px;" /></a>
+            <a href="http://www.twitter.com"><img class="social" src="images/twit.jpg" style="margin:0 auto; height: 45px; width: 48px;" /></a>
+        </center>
+    </div>
+
+    <asp:Panel id="controlpanel" runat="server">
+            <a href="Default.aspx"><asp:Image ID="imgSiteLogo" runat="server" ImageUrl="images/logo.png" /></a>
+            <asp:Panel ID="links" runat="server">
+                <asp:Label ID="lblCreate" runat="server"><a href="Create.aspx">Create </a></asp:Label>
+                <asp:Label ID="lblUpdate" runat="server"><a href="Update.aspx">Update </a></asp:Label>
+            </asp:Panel>
+            <div id="user">
+                <asp:Label ID="lblUser" runat="server">Welcome, <a href="User.aspx">whichdockter</a> | Logout</asp:Label>
+            </div>
+    </asp:Panel>
+</body>
+</html>
