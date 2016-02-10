@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Quality is "4 out of 5 stars", Rating is "E for everyone"-->
+<AllReviews>
+  <ComicReview>
+    <ComicName>El Goonish Shive</ComicName> <ReviewerName>Caytlyn Trickey</ReviewerName> <Rating>13+</Rating> <Genre1>Sci-fi</Genre1> <Genre2>Comedy</Genre2> <Status>egscomic.com</Status> <Quality>A</Quality></ComicReview>
+  <ComicReview>
+    <ComicName>Questionable Content</ComicName>
+    <ReviewerName>Caytlyn Trickey</ReviewerName>
+    <Rating>13+</Rating>
+    <Genre1>Slice of life</Genre1>
+    <Genre2>Drama</Genre2>
+    <Status>Active</Status> 
+    <Quality>4</Quality>
+  </ComicReview>
+</AllReviews>
