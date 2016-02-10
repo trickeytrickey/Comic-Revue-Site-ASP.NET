@@ -1,0 +1,123 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Home</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'/>
+
+    <script type="text/javascript">
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '238046923053987',
+                status: true,
+                xfbml: true
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+</head>
+<body>
+<!--Begin scripts for pintrest and Facebook APIs -->
+<script type="text/javascript" async="async" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
+
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=238046923053987";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+</script>
+<!--End scripts for pintrest and Facebook APIs -->
+
+    <form id="form1" runat="server">
+    <!-- Container for the whole website-->
+    <div id ="wrapper">
+       
+        <!-- Header section. Includes logo, login/logout, and navigation.-->
+        <div id="header">
+            <div id="logo"></div>
+            <div id="field">
+                <div id="user">
+                    <span>Login</span>
+                </div>
+            </div>
+            
+            <div id="panel1" class="panel"><img src="images/hdrParanatural.png" /></div>
+            <div id="panel2" class="panel"></div>
+            <div id="panel3" class="panel"></div>
+            <div id="panel4" class="panel"></div>
+        </div><!-- Close header-->
+
+         <div id="pintrest">
+          <a data-pin-do="embedBoard" href="http://www.pinterest.com/komicrevue/komic-revue-top-picks/" data-pin-scale-width="60" data-pin-scale-height="783" data-pin-board-width="184">
+              Komic Revue is on Pintrest</a>
+        </div>
+
+        
+        <!-- Body section. Includes autopopulated RSS feed with reviews and recent site activity.-->
+        <div id="body">
+
+            <section style="color:white;">
+            	<p id="intro">WELCOME FRIEND!</p>
+				<p>To Komic Revue. We are world renowned in our
+                    comic rating system. Our website is user friendly, 
+                    and implements facebook comments and pintrest APIs
+                    in order to enhance your graphical and social experiences.
+                    We have an extensive database of comments that you can 
+                    rate, comment on, and review. Admins will be adding
+                    new comics as they see fit. Want to view our website 
+                    on multiple devices? We have a dynamic website that adjusts
+                    to your screen size. Whether you want a smaller window
+                    to view, or if you are on a tablet or a smart phone, we
+                    accomodate your needs and your devices.
+				</p>
+
+                
+            </section>
+
+            <div class="item">
+                <p>This is a sample RSS item and new page blurb that I need to format.</p>
+            </div>        
+                
+        </div><!-- Close body-->
+        </div><!-- Close wrapper-->
+    </form>
+
+    
+
+    <div id="headSection">
+        <img src="images/logo.png" alt="Comic Review" style="height: 87px; width: 290px; float:left;" />
+        <div id="slogan">Top Rated Comics Delivered to you daily</div>
+
+        <div id="navigation">
+                <a href="User.aspx"><div class="nav"><span>Profiles</span></div></a>
+                <a href="Review.aspx"><div class="nav"><span>Reviews</span></div></a>
+                <a href="Default.aspx"><div class="nav"><span>Home</span></div></a>
+        </div>
+    </div>
+
+    <div id="foot">
+        <center>
+            <a href="http://www.facebook.com"><img class="social" src="images/fb.jpg" style="margin:0 auto; height: 46px; width: 49px;"/></a>
+            <a href="http://www.pintrest.com"><img class="social" src="images/pintrest.jpg" style="margin:0 auto; height: 53px; width: 50px;" /></a>
+            <a href="http://www.twitter.com"><img class="social" src="images/twit.jpg" style="margin:0 auto; height: 45px; width: 48px;" /></a>
+        </center>
+    </div>
+
+
+</body>
+</html>
